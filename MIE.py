@@ -2,9 +2,13 @@ from PIL import Image
 class MIE:
     def __init__(self):
         #Creating an object for inverse class to be used
-        from MultiplicativeInverse import MultiplicativeInverse
-        self.Inverter = MultiplicativeInverse()
+        self.image = None
+        self.pixels = []
         self.loaded = False
+
+        import pickle
+        with open('Multiplicative-Inverse', 'rb') as file:
+            self.mulInv = pickle.load(file)
 
     def loadImage(self, filename):
         #Opening the image
@@ -13,32 +17,24 @@ class MIE:
         self.loaded = True
 
     def saveImage(self, filename):
-        newImage = Image.new(self.image.mode, self.image.size)
-        newImage.putdata(self.pixels)
-        newImage.save(filename, self.image.format)
+        self.image.save(filename, self.image.format)
 
     def showImage(self):
-        newImage = Image.new(self.image.mode, self.image.size)
-        newImage.putdata(self.pixels)
-        newImage.show()
+        self.image.show()
 
     def invertImage(self):
         assert self.loaded == True, 'Please load the image before trying to invert it!'
 
-        for i in range(self.image.width):
-            for j in range(self.image.height):
-                index = i * self.image.height + j
-                R, G, B = self.pixels[index]
+        for index in range(self.image.width * self.image.height):
+            R, G, B = self.pixels[index]
 
-                # R = self.Inverter.invert(R)
-                # G = self.Inverter.invert(G)
-                # B = self.Inverter.invert(B)
+            r = self.mulInv[R]
+            g = self.mulInv[G]
+            b = self.mulInv[B]
 
-                R = 255 - R
-                G = 255 - G
-                B = 255 - B
+            self.pixels[index] = (r, g, b)
 
-                self.pixels[index] = (R, G, B)
+        self.image.putdata(self.pixels)
 
 
 
