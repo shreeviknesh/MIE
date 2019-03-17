@@ -1,40 +1,32 @@
-from PIL import Image
+import cv2
+import numpy as np
+
 class MIE:
     def __init__(self):
         #Creating an object for inverse class to be used
-        self.image = None
-        self.pixels = []
-        self.loaded = False
-
         import pickle
         with open('Multiplicative-Inverse', 'rb') as file:
             self.mulInv = pickle.load(file)
 
     def loadImage(self, filename):
         #Opening the image
-        self.image = Image.open(filename)
-        self.pixels = list(self.image.getdata())
-        self.loaded = True
+        self.image = cv2.imread(filename)
 
     def saveImage(self, filename):
-        self.image.save(filename, self.image.format)
+        cv2.imwrite(filename, self.image)
 
     def showImage(self):
-        self.image.show()
+        cv2.imshow('image',self.image)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
     def invertImage(self):
-        assert self.loaded == True, 'Please load the image before trying to invert it!'
+        def invert(num):
+            return self.mulInv[num]
 
-        for index in range(self.image.width * self.image.height):
-            R, G, B = self.pixels[index]
-
-            r = self.mulInv[R]
-            g = self.mulInv[G]
-            b = self.mulInv[B]
-
-            self.pixels[index] = (r, g, b)
-
-        self.image.putdata(self.pixels)
-
+        for i in range(len(self.image)):
+            for j in range(len(self.image[0])):
+                for k in range(len(self.image[0][0])):
+                    self.image[i][j][k] = invert(self.image[i][j][k])
 
 
