@@ -4,15 +4,15 @@ An image encryption algorithm that makes use of GF(2<sup>8</sup>) modular arithm
 ## Samples
 <div>
     <div style="display:inline-block;">
-        Input Image
+        <h3>Input Image</h3> <br/>
         <img src="sample/input.jpg" alt="Sample Input Image" style="margin: 100px; display:inline-block;" height="300px"/>
     </div>
     <div style="display:inline-block;">
-        Encrypted Image
+        <h3>Encrypted Image</h3> <br/>
         <img src="sample/encrypted.jpg" alt="Encrypted Image" style="margin: 100px; display:inline-block;" height="300px"/>
     </div>
     <div style="display:inline-block;">
-        Decrypted Image
+        <h3>Decrypted Image</h3> <br/>
         <img src="sample/decrypted.jpg" alt="Decrypted Image" style="margin: 100px; display:inline-block;" height="300px"/>
     </div>
 </div>
