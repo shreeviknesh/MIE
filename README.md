@@ -1,23 +1,27 @@
 # MIE - Multiplicative Inverse Encryption
 An image encryption algorithm that makes use of GF(2<sup>8</sup>) modular arithmetic. The function has been implemented in both C++ and Python.
 
-## Samples
+Samples
+----
 |Input Image|Encrypted Image|Decrypted Image|
 |---|---|---|
 |<img src="sample/input-1.jpg" alt="Sample Input Image" height="300px"/>|<img src="sample/encrypted-1.jpg" alt="Encrypted Image" height="300px"/>|<img src="sample/decrypted-1.jpg" alt="Decrypted Image" height="300px"/>|
 |<img src="sample/input-2.jfif" alt="Sample Input Image" height="300px"/>|<img src="sample/encrypted-2.jfif" alt="Encrypted Image" height="300px"/>|<img src="sample/decrypted-2.jfif" alt="Decrypted Image" height="300px"/>|
 
-## About the algorithm
+About the algorithm
+----
 The MIE algorithm makes use of 2<sup>8</sup> modular arithmetic. Therefore, the encryption and decryption of the image file requires only one function.
 
 i.e., `encrypt(encrypt(value)) = value`
 
-## Algorithm
+Algorithm
+----
 1. Read the image file and convert it to an array of pixels.
 2. For every pixel of the image, find the Modular Multiplicative Inverse of the RGB values and update it in the array.
 3. Save the encrypted/decrypted pixel values as image
 
-## Prerequisites
+Prerequisites
+----
 ### C++
 - The MIE-CPP module uses [STB](https://github.com/nothings/stb) libraries for reading and writing files.
 
@@ -25,7 +29,8 @@ i.e., `encrypt(encrypt(value)) = value`
 - The MIE-Python module uses [OpenCV](https://pypi.org/project/opencv-python/) and [Wand](https://pypi.org/project/Wand/) packages, so make sure it is installed before trying to use the MIE module.
 - Also install: [ImageMagick](http://www.imagemagick.org/script/download.php) and [GhostScript](https://www.ghostscript.com/download/gsdnld.html) as they are prequisites for Wand.
 
-## Usage
+Usage
+----
 ### C++
 1. Compile and create an executable file of the program. 
     - Ex: `g++ encryptor.cpp -o encryptor.exe`
@@ -45,3 +50,8 @@ i.e., `encrypt(encrypt(value)) = value`
     2. Encrypt/Decrypt the PDF using the `MIE.encryptImages()` or `MIE.decryptImages()` methods
     3. The encrypted PDF will be saved automatically
 5. End
+
+TODO
+----
+- Implement own functions for reading/writing image files.
+- Pair with another algorithm to make the encryption secure and robust.
