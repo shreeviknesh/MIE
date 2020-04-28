@@ -4,7 +4,8 @@ An image encryption algorithm that makes use of GF(2<sup>8</sup>) modular arithm
 ## Samples
 |Input Image|Encrypted Image|Decrypted Image|
 |---|---|---|
-|<img src="sample/input.jpg" alt="Sample Input Image" height="300px"/>|<img src="sample/encrypted.jpg" alt="Encrypted Image" height="300px"/>|<img src="sample/decrypted.jpg" alt="Decrypted Image" height="300px"/>|
+|<img src="sample/input-1.jpg" alt="Sample Input Image" height="300px"/>|<img src="sample/encrypted-1.jpg" alt="Encrypted Image" height="300px"/>|<img src="sample/decrypted-1.jpg" alt="Decrypted Image" height="300px"/>|
+|<img src="sample/input-2.jfif" alt="Sample Input Image" height="300px"/>|<img src="sample/encrypted-2.jfif" alt="Encrypted Image" height="300px"/>|<img src="sample/decrypted-2.jfif" alt="Decrypted Image" height="300px"/>|
 
 ## About the algorithm
 The MIE algorithm makes use of 2<sup>8</sup> modular arithmetic. Therefore, the encryption and decryption of the image file requires only one function.
