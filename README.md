@@ -1,6 +1,22 @@
 # MIE - Multiplicative Inverse Encryption
 An image encryption algorithm that makes use of GF(2<sup>8</sup>) modular arithmetic. The function has been implemented in both C++ and Python.
 
+## Samples
+<div>
+    <div style="display:inline-block;">
+        Input Image
+        <img src="sample/input.jpg" alt="Sample Input Image" style="margin: 100px; display:inline-block;" height="300px"/>
+    </div>
+    <div style="display:inline-block;">
+        Encrypted Image
+        <img src="sample/encrypted.jpg" alt="Encrypted Image" style="margin: 100px; display:inline-block;" height="300px"/>
+    </div>
+    <div style="display:inline-block;">
+        Decrypted Image
+        <img src="sample/decrypted.jpg" alt="Decrypted Image" style="margin: 100px; display:inline-block;" height="300px"/>
+    </div>
+</div>
+
 ## About the algorithm
 The MIE algorithm makes use of 2<sup>8</sup> modular arithmetic. Therefore, the encryption and decryption of the image file requires only one function.
 
