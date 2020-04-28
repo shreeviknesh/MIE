@@ -19,7 +19,7 @@ i.e., `encrypt(encrypt(value)) = value`
 
 ## Prerequisites
 ### C++
-- The MIE-CPP module uses [https://github.com/nothings/stb](STB) libraries for reading and writing files.
+- The MIE-CPP module uses [STB](https://github.com/nothings/stb) libraries for reading and writing files.
 
 ### Python
 - The MIE-Python module uses [OpenCV](https://pypi.org/project/opencv-python/) and [Wand](https://pypi.org/project/Wand/) packages, so make sure it is installed before trying to use the MIE module.
