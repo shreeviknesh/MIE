@@ -2,18 +2,18 @@
 An image encryption algorithm that makes use of GF(2<sup>8</sup>) modular arithmetic. The function has been implemented in both C++ and Python.
 
 ## Samples
-<div>
-    <div style="display:inline-block;">
-        <h3>Input Image</h3> <br/>
-        <img src="sample/input.jpg" alt="Sample Input Image" style="margin: 100px; display:inline-block;" height="300px"/>
+<div style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
+    <div>
+        Input Image<br/>
+        <img src="sample/input.jpg" alt="Sample Input Image" height="300px"/>
     </div>
-    <div style="display:inline-block;">
-        <h3>Encrypted Image</h3> <br/>
-        <img src="sample/encrypted.jpg" alt="Encrypted Image" style="margin: 100px; display:inline-block;" height="300px"/>
+    <div>
+        Encrypted Image<br/>
+        <img src="sample/encrypted.jpg" alt="Encrypted Image" height="300px"/>
     </div>
-    <div style="display:inline-block;">
-        <h3>Decrypted Image</h3> <br/>
-        <img src="sample/decrypted.jpg" alt="Decrypted Image" style="margin: 100px; display:inline-block;" height="300px"/>
+    <div>
+        Decrypted Image<br/>
+        <img src="sample/decrypted.jpg" alt="Decrypted Image" height="300px"/>
     </div>
 </div>
 
