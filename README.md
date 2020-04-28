@@ -15,16 +15,16 @@ Algorithm
 
 Prerequisites
 ----
-### C++
+#### C++
 - The MIE-CPP module uses [https://github.com/nothings/stb](STB) libraries for reading and writing files.
 
-### Python
+#### Python
 - The MIE-Python module uses [OpenCV](https://pypi.org/project/opencv-python/) and [Wand](https://pypi.org/project/Wand/) packages, so make sure it is installed before trying to use the MIE module.
 - Also install: [ImageMagick](http://www.imagemagick.org/script/download.php) and [GhostScript](https://www.ghostscript.com/download/gsdnld.html) as they are prequisites for Wand.
 
 Usage
 ----
-### C++
+#### C++
 1. Compile and create an executable file of the program. 
     - Ex: `g++ encryptor.cpp -o encryptor.exe`
 
@@ -32,7 +32,7 @@ Usage
     - i.e., `encryptor.exe -E input.png output.png`
     - Usage: <FILE.exe> ((-E/-e/encrypt)/(-D/-d/decrypt)) <INPUT_FILENAME> <OUTPUT_FILENAME>
 
-### Python
+#### Python
 1. Import the MIE.py file
 
 2. Instantiate the MIE or MIE_PDF files depending on your requirement
