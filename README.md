@@ -27,24 +27,19 @@ Usage
 #### C++
 1. Compile and create an executable file of the program. 
     - Ex: `g++ encryptor.cpp -o encryptor.exe`
-
 2. Pass the command line arguments for the executable file to perform encryption/decryption.
     - i.e., `encryptor.exe -E input.png output.png`
     - Usage: <FILE.exe> ((-E/-e/encrypt)/(-D/-d/decrypt)) <INPUT_FILENAME> <OUTPUT_FILENAME>
 
 #### Python
 1. Import the MIE.py file
-
 2. Instantiate the MIE or MIE_PDF files depending on your requirement
-
 3. MIE
     1. Load the image using the `MIE.loadImage()` method
     2. Encrypt/Decrypt the image using the `MIE.encrypt()` or `MIE.decrypt()` methods
     3. Save the image using the `MIE.saveImage()` method
-
 4. MIE_PDF
     1. Load the PDF using the `MIE.getImages()` method
     2. Encrypt/Decrypt the PDF using the `MIE.encryptImages()` or `MIE.decryptImages()` methods
     3. The encrypted PDF will be saved automatically
-    
 5. End
