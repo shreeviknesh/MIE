@@ -2,20 +2,9 @@
 An image encryption algorithm that makes use of GF(2<sup>8</sup>) modular arithmetic. The function has been implemented in both C++ and Python.
 
 ## Samples
-<div style="display:grid; grid-template-columns: 1fr 1fr 1fr;">
-    <div>
-        Input Image<br/>
-        <img src="sample/input.jpg" alt="Sample Input Image" height="300px"/>
-    </div>
-    <div>
-        Encrypted Image<br/>
-        <img src="sample/encrypted.jpg" alt="Encrypted Image" height="300px"/>
-    </div>
-    <div>
-        Decrypted Image<br/>
-        <img src="sample/decrypted.jpg" alt="Decrypted Image" height="300px"/>
-    </div>
-</div>
+|Input Image|Encrypted Image|Decrypted Image|
+|---|---|---|
+|<img src="sample/input.jpg" alt="Sample Input Image" height="300px"/>|<img src="sample/encrypted.jpg" alt="Encrypted Image" height="300px"/>|<img src="sample/decrypted.jpg" alt="Decrypted Image" height="300px"/>|
 
 ## About the algorithm
 The MIE algorithm makes use of 2<sup>8</sup> modular arithmetic. Therefore, the encryption and decryption of the image file requires only one function.
